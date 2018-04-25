@@ -1,0 +1,23 @@
+.htaccess
+.idea/
+/config.php
+admin/config.php
+
+demo1_1511345482.zip
+
+!index.html
+
+download/
+image/data/
+image/cache/
+system/cache/
+system/logs/
+
+system/storage/
+
+# vQmod log files
+vqmod/logs/*
+# vQmod cache files
+vqmod/vqcache/*
+vqmod/checked.cache
+vqmod/mods.cache
