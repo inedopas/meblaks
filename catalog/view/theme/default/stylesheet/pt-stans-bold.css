@@ -1,0 +1,12 @@
+/*****************************
+ All rights reserved.
+ AllFont.ru (c) 2011-2015
+ *****************************/
+@font-face {
+    font-family: 'PT Sans Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: local('PT Sans Bold'), local('PTSans-Bold'),
+        url(../fonts/pt-sans-bold_8246f63cc9f8e5253561f0af4cf76a07.woff) format('woff'),
+        url(../fonts/pt-sans-bold_8246f63cc9f8e5253561f0af4cf76a07.ttf) format('truetype');
+}

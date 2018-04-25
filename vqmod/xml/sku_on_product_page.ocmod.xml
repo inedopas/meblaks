@@ -1,0 +1,32 @@
+<modification>
+    <name>SKU On Product Page by EDesigniz</name>
+	<version>2.2.0.0</version>
+	<link>http://www.edesigniz.com</link>
+	<author>EDesigniz Team</author>
+	<code>edesigniz_sku_product_page</code>
+
+
+	<file path="catalog/controller/product/product.php">
+		<operation>
+			<search ><![CDATA[$data['model'] = $product_info['model'];]]></search>
+			<add position="after"><![CDATA[
+			$data['sku'] = $product_info['sku'];
+		]]></add>
+		</operation>
+        <operation>
+			<search ><![CDATA[$data['text_model'] = $this->language->get('text_model');]]></search>
+			<add position="after"><![CDATA[
+            $data['text_sku'] = $this->language->get('text_sku'); 
+		]]></add>
+		</operation>
+	</file>
+		<file path="catalog/view/theme/*/template/product/product.tpl">
+		<operation>
+			<search ><![CDATA[<li><?php echo $text_model; ?> <?php echo $model; ?></li>]]></search>
+			<add position="after"><![CDATA[<li>SKU Code: <?php echo $sku; ?></li>   
+		]]></add>
+		</operation>
+	</file>
+    
+      	
+</modification>

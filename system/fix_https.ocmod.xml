@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+    <name>FIX HTTPS</name>
+    <version>2.3.7</version>
+    <author>admin@opencartadmin.com | http://forum.opencart.pro/profile/185-yoda/</author>
+    <code>fix_https</code>
+    <link>http://opencartadmin.com</link>
+    <file path="system/library/response.php" error="skip">
+    <operation error="skip">
+        <search><![CDATA[echo $output;]]></search>
+        <add position="before"><![CDATA[
+			if ((isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == '1' || $_SERVER['HTTPS'])) || (!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && (strtolower($_SERVER['HTTP_X_FORWARDED_PROTO']) == 'https') || (!empty($_SERVER['HTTP_X_FORWARDED_SSL']) && $_SERVER['HTTP_X_FORWARDED_SSL'] == 'on'))) {
+				$output = str_replace('http://meblaks.com.ua/', HTTPS_SERVER, $output);
+			} else {				$output = str_replace(HTTPS_SERVER, HTTP_SERVER, $output);
+			}
+    ]]></add>
+    </operation>
+    </file>
+    <file path="system/library/cache.php" error="skip">
+    <operation error="skip">
+        <search><![CDATA[class Cache {]]></search>
+        <add position="after"><![CDATA[
+private $ssl = 'http_';
+    ]]></add>
+    </operation>
+    <operation error="skip">
+        <search regex="true"><![CDATA[~public function __construct(.*?)\{~]]></search>
+        <add position="replace"><![CDATA[
+        public function __construct$1{
+		if ((isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == '1' || $_SERVER['HTTPS'])) || (!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && (strtolower($_SERVER['HTTP_X_FORWARDED_PROTO']) == 'https') || (!empty($_SERVER['HTTP_X_FORWARDED_SSL']) && $_SERVER['HTTP_X_FORWARDED_SSL'] == 'on'))) {
+			$this->ssl = 'https_';
+		}
+
+    ]]></add>
+    </operation>
+    <operation error="skip">
+        <search><![CDATA[return]]></search>
+        <add position="before"><![CDATA[
+		$key = $this->ssl.$key;
+    ]]></add>
+    </operation>
+    </file>
+</modification>
