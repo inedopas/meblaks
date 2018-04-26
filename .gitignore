@@ -11,6 +11,7 @@ download/
 image/data/
 image/cache/
 system/cache/
+system/modification/
 system/logs/
 
 system/storage/
