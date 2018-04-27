@@ -2314,3 +2314,16 @@ th { border: 2px solid #98ce9d;
 .card-attributes ul li .value{
 	padding: 0px 0px 0px 10px;
 }
+
+/* yuv styles */
+.wrapp-option-color{
+    margin-top: 10px;
+}
+
+.options .wrapp-option-color .radio{
+    display: inline-block;
+    width: 90px;
+    text-align: center;
+    vertical-align: top;
+    margin: 0;
+}
