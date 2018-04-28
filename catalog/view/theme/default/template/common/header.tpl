@@ -221,8 +221,8 @@
  
   <div class="contact">
 <div class="phones">
-	 	<a href = "javascript:void(0);" class="header_phone"><span>(095)</span> 569 - 08 - 04</a>
-  		<a href = "javascript:void(0);" class="header_phone"><span>(098)</span> 335 - 73 - 85</a>
+	 	<a href="tel:0955690804" class="header_phone"><span>(095)</span> 569 - 08 - 04</a>
+  		<a href="tel:0983357385" class="header_phone"><span>(098)</span> 335 - 73 - 85</a>
 	 	</div>
   	
   
