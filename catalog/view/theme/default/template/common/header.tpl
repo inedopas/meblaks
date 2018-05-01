@@ -93,7 +93,7 @@
 	<script type="text/javascript" src="catalog/view/javascript/bootstrap/js/bootstrap.min.js"></script>
 <!-- <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" /> -->
 	
-	<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css?v0.1" />
+	<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css?v0.2" />
 	<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/responsive.css" />
 	<!-- <link rel="stylesheet" type="text/css" href="catalog/view/theme/default/js/assets/owl.carousel.css" /> -->
 <?php foreach ($styles as $style) { ?>
