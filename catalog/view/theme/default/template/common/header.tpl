@@ -93,7 +93,7 @@
 	<script type="text/javascript" src="catalog/view/javascript/bootstrap/js/bootstrap.min.js"></script>
 <!-- <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" /> -->
 	
-	<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />
+	<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css?v0.1" />
 	<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/responsive.css" />
 	<!-- <link rel="stylesheet" type="text/css" href="catalog/view/theme/default/js/assets/owl.carousel.css" /> -->
 <?php foreach ($styles as $style) { ?>
@@ -221,8 +221,8 @@
  
   <div class="contact">
 <div class="phones">
-	 	<a href = "javascript:void(0);" class="header_phone"><span>(095)</span> 569 - 08 - 04</a>
-  		<a href = "javascript:void(0);" class="header_phone"><span>(098)</span> 335 - 73 - 85</a>
+	 	<a href="tel:0955690804" class="header_phone"><span>(095)</span> 569 - 08 - 04</a>
+  		<a href="tel:0983357385" class="header_phone"><span>(098)</span> 335 - 73 - 85</a>
 	 	</div>
   	
   

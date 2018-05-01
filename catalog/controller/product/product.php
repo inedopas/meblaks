@@ -395,6 +395,57 @@ class ControllerProductProduct extends Controller {
 				);
 			}
 
+            $data['raw_price'] = $data['price'];
+            $data['raw_special'] = $data['special'];
+
+            if ($data['price']) {
+                $data['price'] = '<span class=\'autocalc-product-price\'>' . $data['price'] . '</span>';
+            }
+            if ($data['special']) {
+                $data['special'] = '<span class=\'autocalc-product-special\'>' . $data['special'] . '</span>';
+            }
+            if ($data['points']) {
+                $data['points'] = '<span class=\'autocalc-product-points\'>' . $data['points'] . '</span>';
+            }
+
+            $data['price_value'] = $product_info['price'];
+            $data['special_value'] = $product_info['special'];
+            $data['tax_value'] = (float)$product_info['special'] ? $product_info['special'] : $product_info['price'];
+            $data['points_value'] = $product_info['points'];
+
+            $var_currency = array();
+            $currency_code = !empty($this->session->data['currency']) ? $this->session->data['currency'] : $this->config->get('config_currency');
+            $var_currency['value'] = $this->currency->getValue($currency_code);
+            $var_currency['symbol_left'] = $this->currency->getSymbolLeft($currency_code);
+            $var_currency['symbol_right'] = $this->currency->getSymbolRight($currency_code);
+            $var_currency['decimals'] = $this->currency->getDecimalPlace($currency_code);
+            $var_currency['decimal_point'] = $this->language->get('decimal_point');
+            $var_currency['thousand_point'] = $this->language->get('thousand_point');
+            $data['autocalc_currency'] = $var_currency;
+
+            $currency2_code = $this->config->get('config_currency2');
+            if ($this->currency->has($currency2_code) && $currency2_code != $currency_code) {
+                $var_currency = array();
+                $currency_code = $currency2_code;
+                $var_currency['value'] = $this->currency->getValue($currency_code);
+                $var_currency['symbol_left'] = $this->currency->getSymbolLeft($currency_code);
+                $var_currency['symbol_right'] = $this->currency->getSymbolRight($currency_code);
+                $var_currency['decimals'] = $this->currency->getDecimalPlace($currency_code);
+                $var_currency['decimal_point'] = $this->language->get('decimal_point');
+                $var_currency['thousand_point'] = $this->language->get('thousand_point');
+                $data['autocalc_currency2'] = $var_currency;
+            }
+
+            $data['dicounts_unf'] = $discounts;
+
+            $data['tax_class_id'] = $product_info['tax_class_id'];
+            $data['tax_rates'] = $this->tax->getRates(0, $product_info['tax_class_id']);
+
+            $data['autocalc_option_special'] = $this->config->get('config_autocalc_option_special');
+            $data['autocalc_option_discount'] = $this->config->get('config_autocalc_option_discount');
+            $data['autocalc_not_mul_qty'] = $this->config->get('config_autocalc_not_mul_qty');
+            $data['autocalc_select_first'] = $this->config->get('config_autocalc_select_first');
+
 			$data['options'] = array();
 
 			foreach ($this->model_catalog_product->getProductOptions($this->request->get['product_id']) as $option) {
@@ -403,12 +454,29 @@ class ControllerProductProduct extends Controller {
 				foreach ($option['product_option_value'] as $option_value) {
 					if (!$option_value['subtract'] || ($option_value['quantity'] > 0)) {
 						if ((($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) && (float)$option_value['price']) {
-							$price = $this->currency->format($this->tax->calculate($option_value['price'], $product_info['tax_class_id'], $this->config->get('config_tax') ? 'P' : false));
+                            if ($option_value['price_prefix']=="u") {
+                                $price = '+' . (float)$option_value['price'].'%';
+                            }
+                            elseif ($option_value['price_prefix']=="d") {
+                                $price = '-' . (float)$option_value['price'].'%';
+                            }
+                            elseif ($option_value['price_prefix']=="*") {
+                                $price = '*' . (float)$option_value['price'];
+                            }
+                            elseif ($option_value['price_prefix']=="/") {
+                                $price = '/' . (float)$option_value['price'];
+                            }
+                            else{
+                                $price = $this->currency->format($this->tax->calculate($option_value['price'], $product_info['tax_class_id'], $this->config->get('config_tax') ? 'P' : false), $this->session->data['currency']);
+                            }
+							//$price = $this->currency->format($this->tax->calculate($option_value['price'], $product_info['tax_class_id'], $this->config->get('config_tax') ? 'P' : false));
 						} else {
 							$price = false;
 						}
 
 						$product_option_value_data[] = array(
+                            'price_value'                   => $option_value['price'],
+                            'points_value'                  => intval($option_value['points_prefix'].$option_value['points']),
 							'product_option_value_id' => $option_value['product_option_value_id'],
 							'option_value_id'         => $option_value['option_value_id'],
 							'name'                    => $option_value['name'],

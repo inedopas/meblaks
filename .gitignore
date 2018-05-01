@@ -6,11 +6,12 @@ admin/config.php
 demo1_1511345482.zip
 
 !index.html
-
+image/
 download/
 image/data/
 image/cache/
 system/cache/
+system/modification/
 system/logs/
 
 system/storage/

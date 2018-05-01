@@ -24,7 +24,7 @@
     <div class="grid_holder">
     <div class="product-grid <?php echo $module; ?> <?php if ($carousel) { ?>carousel<?php } ?>">
         <?php foreach ($tab['products'] as $product) { ?><!--
-        --><div class="item contrast_font col-lg-4 col-md-4 col-sm-4 col-xs-6 seller">
+        --><div class="item contrast_font col-md-3 col-sm-12 seller">
             <?php if ($product['thumb']) { ?>
 				  <div class="image">
               <?php if ($product['special'] && $cosyone_percentage_sale_badge == 'enabled') { ?>

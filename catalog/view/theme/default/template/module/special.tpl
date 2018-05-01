@@ -1,7 +1,7 @@
 <!-- <h3><?php echo $heading_title; ?></h3> -->
 <div class="row">
   <?php foreach ($products as $product) { ?>
-<div class="item contrast_font col-lg-4 col-md-4 col-sm-6 col-xs-6 seller">
+<div class="item contrast_font col-lg-3 col-md-3 col-sm-12 col-xs-12 seller">
  
      <div class="image">
               <?php if ($product['special'] && $cosyone_percentage_sale_badge == 'enabled') { ?>
@@ -18,7 +18,7 @@
             <div class="<?php echo $label['position']; ?>"><img src="<?php echo HTTP_SERVER.'image/'.$label['image']; ?>"></div>
       <?php } ?>
       <?php } ?>        
-                <?php if ($cosyone_text_ql) {?>
+                <?php if ($cosyone_text_ql)  ?>
                 <div class="main_quicklook">
                 <a href="<?php echo $product['quickview']; ?>" rel="nofollow" class="button quickview"><i class="fa fa-eye"></i> <?php echo $cosyone_text_ql; ?></a>
                 </div>

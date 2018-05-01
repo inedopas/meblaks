@@ -53,14 +53,9 @@
 			<?php echo $cosyone_footer_custom_block; ?>
 		</div>
 	</div>
-
-
-
-
 </div>
-
 </div>
-<div style="text-align: center;">&copy; 2010 - <?php echo date('Y'); ?> - Интернет - магазин мебели Meblaks</div>
+	<div id="footer-copirate">&copy; 2010 - <?php echo date('Y'); ?> - Интернет - магазин мебели Meblaks</div>
 </footer>
 <!-- #footer ends -->
 

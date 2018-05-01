@@ -433,6 +433,9 @@ header div#cart {
 .menu_drop_down {
     display: none;
 }
+.nav{
+    text-align: center;
+}
 .nav_wrapper {
     background: #898e02;
 
@@ -443,7 +446,8 @@ header div#cart {
     position: relative;
     display: inline-block;
     color: #fff;
-    padding: 10px 0px;
+    vertical-align: middle;
+    /*padding: 10px 0px;*/
 }
 .nav_wrapper .nav > li > a {
     position: relative;
@@ -454,6 +458,8 @@ header div#cart {
     text-align: left;
     font-size: 14px;
     line-height: 17px;
+    max-width: 115px;
+    text-align: center;
 }
 .blog-blog .blog_post .main_thumb img {
     display: block;
@@ -718,12 +724,12 @@ div#rev_slider_1_1_wrapper {
 
 
 .nav-tabs.product-page>li:nth-child(2)>a,  .nav-tabs.product-page>li:nth-child(2):hover>a{
-        background-image: url(../image/otzivi.png);
+        /*background-image: url(../image/otzivi.png);*/
             background-size: contain;
 }
 
 .nav-tabs.product-page>li:nth-child(2).active>a, .nav-tabs.product-page>li:nth-child(2):hover>a{
-        background-image: url(../image/otzivi2.png);
+        /*background-image: url(../image/otzivi2.png);*/
             background-size: contain;
 }
 
@@ -1510,7 +1516,7 @@ display: inline-block;
     font-size: 16px;
 }
 .image-additional {
-    margin: 50px 0px 100px 0px;
+    margin: 50px 0px;
 }
 .tab-content {
     margin-top: 20px;
@@ -2115,7 +2121,7 @@ display: inline-block;
 }
 
 .product .owl-wrapper .item.contrast_font.seller {
-    margin: 15px 15px 250px 15px;
+    margin: 15px 15px 140px 15px;
 }
 .reviews .img-responsive {
         margin: 0 auto;
@@ -2313,4 +2319,30 @@ th { border: 2px solid #98ce9d;
 }
 .card-attributes ul li .value{
 	padding: 0px 0px 0px 10px;
+}
+
+/* yuv styles */
+.wrapp-option-color{
+    margin-top: 10px;
+}
+
+.options .wrapp-option-color .radio{
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    vertical-align: top;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.options .wrapp-option-color .radio img{
+    width: 90px;
+    padding: 0px;
+    border: none;
+    border-radius: 0px;
+}
+#footer-copirate{
+    background: #3b3b3b;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 10px;
 }
