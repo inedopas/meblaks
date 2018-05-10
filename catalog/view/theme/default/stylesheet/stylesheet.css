@@ -2339,10 +2339,35 @@ th { border: 2px solid #98ce9d;
     padding: 0px;
     border: none;
     border-radius: 0px;
+    display: block;
 }
 #footer-copirate{
     background: #3b3b3b;
     text-align: center;
     color: #fff;
     padding-bottom: 10px;
+}
+
+.filter_wrapper .sort{
+    margin: 0 5px 20px 0;
+}
+
+.box-subcat{
+    padding: 30px 0 20px 0;
+    text-align: center;
+}
+
+.box-subcat li{
+    display: inline-block;
+    text-align: left;
+    min-width: 300px;
+    margin-bottom: 10px;
+    padding: 0 5px;
+}
+
+.box-subcat li a{
+    line-height: 50px;
+    display: block;
+    border: 1px solid;
+    padding-left: 20px;
 }

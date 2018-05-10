@@ -144,6 +144,7 @@
 
 
                                     <div class="old-price"><span class=""><?php echo $price; ?></span></div>
+                                    <div class="old-price"><span style="color: green !important;font-size: 16px;">[-<?php echo $sales_percantage_main; ?>%]</span></div>
                                     <div class="old-price"><span class=""><?php foreach ($products as $product) { ?>
                                             <?php if ($product['special']) { ?><span
                                                     style="color:green">[<?php echo $product['percent']; ?>
