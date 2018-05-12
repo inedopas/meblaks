@@ -96,7 +96,7 @@
 	
 	<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css?v0.2" />
 	<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/responsive.css" />
-	<!-- <link rel="stylesheet" type="text/css" href="catalog/view/theme/default/js/assets/owl.carousel.css" /> -->
+	<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/owl-carousel/owl.carousel.css" />
 <?php foreach ($styles as $style) { ?>
 <link rel="<?php echo $style['rel']; ?>" type="text/css" href="<?php echo $style['href']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
