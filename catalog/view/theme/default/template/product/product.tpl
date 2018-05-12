@@ -309,9 +309,9 @@
                                 <?php foreach ($option['product_option_value'] as $option_value) { ?>
                                 <div class="radio">
                                     <label>
-                                        <img src="<?php echo $option_value['image']; ?>"
+                                        <div class="color"><img src="<?php echo $option_value['image']; ?>"
                                              alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>"
-                                             class="img-thumbnail"/>
+                                                                class="img-thumbnail"/></div>
                                         <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]"
                                                value="<?php echo $option_value['product_option_value_id']; ?>"/>
                                         <?php echo $option_value['name']; ?>

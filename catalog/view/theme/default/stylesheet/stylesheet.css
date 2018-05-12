@@ -2030,11 +2030,19 @@ input.button:hover, button:hover {
     border: 5px solid white;
 }
 .color:hover {
-      transform: scale(1.6);
+    transform: scale(1.6);
     transition: 0.2s;
     border: 5px solid #c7c7c7;
     padding: 0;
 }
+.color:hover ~ input{
+    opacity: 0;
+}
+
+.owl-item {
+    display: inline-block;
+}
+
 .review-box .owl-item:nth-child(1) {
 display: inline-block;
 }
