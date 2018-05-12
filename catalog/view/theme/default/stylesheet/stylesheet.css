@@ -1056,15 +1056,7 @@ float: right;
 #product label {
     margin: 5px 0px;
 }
-.owl-item {
-    display: inline-block;
-}
-.image-additional .owl-wrapper .owl-item:nth-child(1) {
-    display: inline-block;
-}
-.owl-wrapper .owl-item:nth-child(1) {
-    display: none;
-}
+
 div#product {
     margin-bottom: 20px;
 }
