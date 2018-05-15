@@ -24,7 +24,7 @@
     <div class="grid_holder">
     <div class="product-grid <?php echo $module; ?> <?php if ($carousel) { ?>carousel<?php } ?>">
         <?php foreach ($tab['products'] as $product) { ?><!--
-        --><div class="item contrast_font seller">
+        --><div class="item contrast_font col-md-3 col-xs-12 seller">
             <?php if ($product['thumb']) { ?>
 				  <div class="image">
               <?php if ($product['special'] && $cosyone_percentage_sale_badge == 'enabled') { ?>
@@ -73,32 +73,32 @@
 
 
 				<?php } ?>
-                <!--<div class="hidden_hover">
+                <div class="hidden_hover">
                     <div class="hidden_content">
                          <span class="sku"><?php echo $product['sku']; ?></span>
 
 
                 <div class="attributes">
-       <!-- начинаем вывод атрибутов
+       <!-- начинаем вывод атрибутов -->
        <?php if($product['attribute_groups']) { ?>
                 <?php foreach($product['attribute_groups'] as $attribute_group) { ?>
                     <?php if(!strpos($attribute_group['name'], "—")) { ?>
                         <?php foreach($attribute_group['attribute'] as $attribute) { ?>
-                        <!--если нам надо определенный атрибут
+                        <!--если нам надо определенный атрибут-->
                              <?php if(in_array($attribute['attribute_id'], array(18,4))){ ?>
                                <b><?php echo $attribute['name']; ?></b> <?php echo $attribute['text']; ?><br>
                              <?php } ?>
-                        <!--если нам надо определенный атрибут
+                        <!--если нам надо определенный атрибут-->
                         <?php } ?>
                     <?php } ?>
                 <?php } ?>
             <?php } ?>
- <!-- конец атрибутов
+ <!-- конец атрибутов-->
     </div>
 
 
-                <div class="cart"><button type="submit" class="button contrast" onclick="cart.add('<?php echo $product['product_id']; ?>');" ><!-- <i class="fa fa-shopping-cart"></i> <?php echo $button_cart; ?></button></div>
-                <!-- <div class="icons_wrapper">
+                <div class="cart"><button type="submit" class="button contrast" onclick="cart.add('<?php echo $product['product_id']; ?>');" ><i class="fa fa-shopping-cart"></i> <?php echo $button_cart; ?></button></div>
+                <!--<div class="icons_wrapper">
     <a class="sq_icon" onclick="wishlist.add('<?php echo $product['product_id']; ?>');" data-tooltip="<?php echo $button_wishlist; ?>"><i class="fa fa-heart"></i></a>
     <a class="sq_icon compare" onclick="compare.add('<?php echo $product['product_id']; ?>');" data-tooltip="<?php echo $button_compare; ?>"><i class="fa fa-arrow-right"></i><i class="fa fa-arrow-left"></i></a>
     <?php if ($cosyone_text_ql) { ?>
@@ -107,9 +107,9 @@
     <a class="sq_icon contrast add_to_cart" onclick="cart.add('<?php echo $product['product_id']; ?>');" data-tooltip="<?php echo $button_cart; ?>"><i class="fa fa-shopping-cart"></i></a>
     <a class="plain_link wishlist" onclick="wishlist.add('<?php echo $product['product_id']; ?>');" ><?php echo $button_wishlist; ?></a>
     <a class="plain_link compare" onclick="compare.add('<?php echo $product['product_id']; ?>');" ><?php echo $button_compare; ?></a>
-    </div>
+    </div>-->
         </div>
-            </div>-->
+            </div>
                 <div class="information_wrapper">
                 <div class="left">
 				<div class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
