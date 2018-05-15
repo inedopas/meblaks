@@ -578,9 +578,10 @@ header div#cart {
 }
     .nav-tabs>li {
      float: none;
-    margin-bottom: 0;
+    margin-bottom: 5px;
+    margin-right: 5px;
     padding: 28px 0 0 0;
-    width: 32%;
+    width: 48%;
     height: 82px;
     border: 1px solid #cccccc;
     border-color: #ccc;
