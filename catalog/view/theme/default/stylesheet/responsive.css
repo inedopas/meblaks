@@ -159,8 +159,6 @@ opacity: 0;
 .item.contrast_font.seller .cart {
     display: block;
     text-align: center;
-    margin-top: 25px;
-    margin-bottom: 25px;
 }
 .item.contrast_font.seller:hover {
     background: #fff;
@@ -582,7 +580,7 @@ header div#cart {
      float: none;
     margin-bottom: 0;
     padding: 28px 0 0 0;
-    width: 50%;
+    width: 32%;
     height: 82px;
     border: 1px solid #cccccc;
     border-color: #ccc;
@@ -743,7 +741,7 @@ span.mainprice {
     z-index: 50;
     /* margin-top: 15px; */
     /* float: left; */
-    min-height: 80px;
+    min-height: 50px;
 }
 span.price-old {
     font-size: 18px;
@@ -843,7 +841,6 @@ button.button.contrast:after {
     margin-top: 0px;
     display: block;
     min-height: 60px;
-    min-height: 120px;
     position: relative;
 }
 

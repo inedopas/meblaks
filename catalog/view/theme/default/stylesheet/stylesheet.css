@@ -80,8 +80,7 @@ a:focus, a:hover {
     float: none;
         margin-top: 10px;
     display: block;
-    min-height: 60px;
-        min-height: 80px;
+    min-height: 70px;
     position: relative;
 }
 a {
@@ -916,7 +915,7 @@ span.mainprice {
 .price {
     text-align: center;
     display: inline-block;
-    font-size: 36px;
+    font-size: 32px;
     font-family: 'PT Sans Bold', arial;
     line-height: 47px;
     margin: 0;
@@ -939,7 +938,6 @@ span.mainprice {
     position: absolute;
     top: 0;
     left: 0;
-    display: none;
     width: 100%;
     border-bottom-width: 0;
     border-radius: 1px;
@@ -951,13 +949,11 @@ span.mainprice {
 
 }
 .hidden_content{
-        position: relative;
     position: absolute;
     z-index: 700;
     bottom: -5px;
     left: 0;
     width: 100%;
-    z-index: 100;
     background: #fff;
 }
 .item.contrast_font.seller:hover .attributes {
@@ -1056,15 +1052,7 @@ float: right;
 #product label {
     margin: 5px 0px;
 }
-.owl-item {
-    display: inline-block;
-}
-.image-additional .owl-wrapper .owl-item:nth-child(1) {
-    display: inline-block;
-}
-.owl-wrapper .owl-item:nth-child(1) {
-    display: none;
-}
+
 div#product {
     margin-bottom: 20px;
 }
@@ -2038,11 +2026,22 @@ input.button:hover, button:hover {
     border: 5px solid white;
 }
 .color:hover {
-      transform: scale(1.6);
+    transform: scale(1.7);
     transition: 0.2s;
-    border: 5px solid #c7c7c7;
+    border: 1px solid #c7c7c7;
     padding: 0;
 }
+.color:hover ~ input{
+    opacity: 0;
+}
+.color input[type=radio]{
+    position: unset !important;
+}
+
+.owl-item {
+    display: inline-block;
+}
+
 .review-box .owl-item:nth-child(1) {
 display: inline-block;
 }
@@ -2121,7 +2120,7 @@ display: inline-block;
 }
 
 .product .owl-wrapper .item.contrast_font.seller {
-    margin: 15px 15px 140px 15px;
+    /*margin: 15px 15px 140px 15px;*/
 }
 .reviews .img-responsive {
         margin: 0 auto;
@@ -2333,16 +2332,46 @@ th { border: 2px solid #98ce9d;
     vertical-align: top;
     margin: 0;
     margin-bottom: 10px;
+    margin-right: 5px;
 }
 .options .wrapp-option-color .radio img{
     width: 90px;
     padding: 0px;
     border: none;
     border-radius: 0px;
+    display: block;
 }
 #footer-copirate{
     background: #3b3b3b;
     text-align: center;
     color: #fff;
     padding-bottom: 10px;
+}
+
+.filter_wrapper .sort{
+    margin: 0 5px 20px 0;
+}
+
+.box-subcat{
+    padding: 30px 0 20px 0;
+    text-align: center;
+}
+
+.box-subcat li{
+    display: inline-block;
+    text-align: left;
+    min-width: 300px;
+    margin-bottom: 10px;
+    padding: 0 5px;
+}
+
+.box-subcat li a{
+    line-height: 50px;
+    display: block;
+    border: 1px solid;
+    padding-left: 20px;
+}
+
+.image_carousel .owl-prev, .image_carousel .owl-next{
+    top: 20% !important;
 }

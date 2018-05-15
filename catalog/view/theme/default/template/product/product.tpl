@@ -144,6 +144,7 @@
 
 
                                     <div class="old-price"><span class=""><?php echo $price; ?></span></div>
+                                    <div class="old-price"><span style="color: green !important;font-size: 16px;">[-<?php echo $sales_percantage_main; ?>%]</span></div>
                                     <div class="old-price"><span class=""><?php foreach ($products as $product) { ?>
                                             <?php if ($product['special']) { ?><span
                                                     style="color:green">[<?php echo $product['percent']; ?>
@@ -308,9 +309,9 @@
                                 <?php foreach ($option['product_option_value'] as $option_value) { ?>
                                 <div class="radio">
                                     <label>
-                                        <img src="<?php echo $option_value['image']; ?>"
+                                        <div class="color"><img src="<?php echo $option_value['image']; ?>"
                                              alt="<?php echo $option_value['name'] . ($option_value['price'] ? ' ' . $option_value['price_prefix'] . $option_value['price'] : ''); ?>"
-                                             class="img-thumbnail"/>
+                                                                class="img-thumbnail"/></div>
                                         <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]"
                                                value="<?php echo $option_value['product_option_value_id']; ?>"/>
                                         <?php echo $option_value['name']; ?>
@@ -768,33 +769,33 @@
                     </div>
                     <?php } ?>
                 </div>
-                <div class="hidden_hover">
+                <!--<div class="hidden_hover">
                     <div class="hidden_content">
 
 
                         <div class="attributes">
-                            <!-- начинаем вывод атрибутов-->
+                            <!-- начинаем вывод атрибутов
                             <?php if($product['attribute_groups']) { ?>
                             <?php foreach($product['attribute_groups'] as $attribute_group) { ?>
-                            <?php if(!strpos($attribute_group['name'], "—")) {?>
+                            <?php if(!strpos($attribute_group['name'], "—")) { ?>
                             <?php foreach($attribute_group['attribute'] as $attribute) { ?>
-                            <!--если нам надо определенный атрибут -->
-                            <?php if(in_array($attribute['attribute_id'], array(18,4))){?>
+                            <!--если нам надо определенный атрибут
+                            <?php if(in_array($attribute['attribute_id'], array(18,4))){ ?>
                             <b><?php echo $attribute['name']; ?></b> <?php echo $attribute['text']; ?><br>
                             <?php } ?>
-                            <!--если нам надо определенный атрибут -->
+                            <!--если нам надо определенный атрибут
                             <?php } ?>
                             <?php } ?>
                             <?php } ?>
                             <?php } ?>
-                            <!-- конец атрибутов-->
+                            <!-- конец атрибутов
                         </div>
 
 
                         <div class="cart">
                             <button type="submit" class="button contrast"
                                     onclick="cart.add('<?php echo $product['product_id']; ?>');">
-                                <!-- <i class="fa fa-shopping-cart"></i> --> <?php echo $button_cart; ?></button>
+                                <!-- <i class="fa fa-shopping-cart"></i> <?php echo $button_cart; ?></button>
                         </div>
                         <!-- <div class="icons_wrapper">
     <a class="sq_icon" onclick="wishlist.add('<?php echo $product['product_id']; ?>');" data-tooltip="<?php echo $button_wishlist; ?>"><i class="fa fa-heart"></i></a>
@@ -805,9 +806,9 @@
     <a class="sq_icon contrast add_to_cart" onclick="cart.add('<?php echo $product['product_id']; ?>');" data-tooltip="<?php echo $button_cart; ?>"><i class="fa fa-shopping-cart"></i></a>
     <a class="plain_link wishlist" onclick="wishlist.add('<?php echo $product['product_id']; ?>');" ><?php echo $button_wishlist; ?></a>
     <a class="plain_link compare" onclick="compare.add('<?php echo $product['product_id']; ?>');" ><?php echo $button_compare; ?></a>
-    </div> -->
+    </div>
                     </div>
-                </div>
+                </div>-->
 
                 <div class="information_wrapper">
                     <div class="left">
