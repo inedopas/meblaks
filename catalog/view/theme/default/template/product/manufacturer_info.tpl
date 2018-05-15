@@ -26,7 +26,7 @@
     <div class="filter_wrapper">
 
 
-    <div class="open_close_filter">
+    <!--div class="open_close_filter">
       <span class="opened"> Открыть фильтр</span>
    </div> 
     <!--фильтр товаров категори-->
