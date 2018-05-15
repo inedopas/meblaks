@@ -2034,6 +2034,9 @@ input.button:hover, button:hover {
 .color:hover ~ input{
     opacity: 0;
 }
+.color input[type=radio]{
+    position: unset !important;
+}
 
 .owl-item {
     display: inline-block;
