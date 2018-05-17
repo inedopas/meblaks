@@ -833,7 +833,7 @@ td.price.total.mobile_hide {
     /*display: none;*/
 }
 .item.contrast_font.seller {
-    padding: 20px;
+    padding: 20px 30px;
     border: 1px solid #cccccc;
     margin-top: -1px;
     border-width: 1px 1px 1px 0;
