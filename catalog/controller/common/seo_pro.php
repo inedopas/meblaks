@@ -227,7 +227,7 @@ class ControllerCommonSeoPro extends Controller {
 		if (isset($postfix)) {
 			$seo_url .= trim($this->config->get('config_seo_url_postfix'));
 		} else {
-			$seo_url .= '/';
+			$seo_url .= '';
 		}
 
 		if(substr($seo_url, -2) == '//') {
