@@ -42,6 +42,11 @@ $_['text_modification']                = 'Модификаторы';
 $_['text_manufacturer']                = 'Производители';
 $_['text_module']                      = 'Модули';
 $_['text_option']                      = 'Опции';
+
+// OCFilter start
+$_['text_ocfilter'] = 'Фильтр товаров OCFilter';
+// OCFilter end
+      
 $_['text_order']                       = 'Заказы';
 $_['text_order_status']                = 'Статус заказов';
 $_['text_payment']                     = 'Оплата';

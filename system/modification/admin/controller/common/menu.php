@@ -65,6 +65,7 @@ $this->load->language('catalog/tab');
 				$data['text_product_tab'] = $this->language->get('text_product_tab');
 				$data['product_tab'] = $this->url->link('catalog/tab', 'token=' . $this->session->data['token'], 'SSL');
 		$data['text_installer'] = $this->language->get('text_installer');
+		$data['text_uninstaller'] = 'Удаление модулей';
 		$data['text_language'] = $this->language->get('text_language');
 		$data['text_layout'] = $this->language->get('text_layout');
 		$data['text_localisation'] = $this->language->get('text_localisation');
@@ -79,6 +80,11 @@ $this->load->language('catalog/tab');
 		$data['text_opencart'] = $this->language->get('text_opencart');
 		$data['text_payment'] = $this->language->get('text_payment');
 		$data['text_product'] = $this->language->get('text_product');
+
+    // OCFilter start
+		$data['text_ocfilter'] = $this->language->get('text_ocfilter');
+		// OCFilter end
+      
 		$data['text_reports'] = $this->language->get('text_reports');
 		$data['text_report_sale_order'] = $this->language->get('text_report_sale_order');
 		$data['text_report_sale_tax'] = $this->language->get('text_report_sale_tax');
@@ -162,7 +168,13 @@ $this->load->language('catalog/tab');
 		$data['fraud'] = $this->url->link('extension/fraud', 'token=' . $this->session->data['token'], 'SSL');
 		$data['geo_zone'] = $this->url->link('localisation/geo_zone', 'token=' . $this->session->data['token'], 'SSL');
 		$data['information'] = $this->url->link('catalog/information', 'token=' . $this->session->data['token'], 'SSL');
+
+ 		// OCFilter start
+		$data['ocfilter'] = $this->url->link('catalog/ocfilter', 'token=' . $this->session->data['token'], 'SSL');
+		// OCFilter end
+      
 		$data['installer'] = $this->url->link('extension/installer', 'token=' . $this->session->data['token'], 'SSL');
+		$data['uninstaller'] = $this->url->link('extension/installer/do_uninstall', 'token=' . $this->session->data['token'], 'SSL');
 		$data['language'] = $this->url->link('localisation/language', 'token=' . $this->session->data['token'], 'SSL');
 		$data['layout'] = $this->url->link('design/layout', 'token=' . $this->session->data['token'], 'SSL');
 		$data['location'] = $this->url->link('localisation/location', 'token=' . $this->session->data['token'], 'SSL');

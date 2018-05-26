@@ -4,6 +4,11 @@
     <ul>
       <li><a href="<?php echo $category; ?>"><?php echo $text_category; ?></a></li>
       <li><a href="<?php echo $product; ?>"><?php echo $text_product; ?></a></li>
+
+		<!-- OCFilter start -->
+    <li><a href="<?php echo $ocfilter; ?>"><?php echo $text_ocfilter; ?></a></li>
+	  <!-- OCFilter end -->
+      
       <li><a href="<?php echo $recurring; ?>"><?php echo $text_recurring; ?></a></li>
       <li><a href="<?php echo $filter; ?>"><?php echo $text_filter; ?></a></li>
       <li><a class="parent"><?php echo $text_attribute; ?></a>
@@ -40,6 +45,7 @@
   <li id="extension"><a class="parent"><i class="fa fa-puzzle-piece fa-fw"></i> <span><?php echo $text_extension; ?></span></a>
     <ul>
       <li><a href="<?php echo $installer; ?>"><?php echo $text_installer; ?></a></li>
+<li><a href="<?php echo $uninstaller; ?>"><?php echo $text_uninstaller; ?></a></li>
       <li><a href="<?php echo $modification; ?>"><?php echo $text_modification; ?></a></li>
       <li><a href="<?php echo $module; ?>"><?php echo $text_module; ?></a></li>
       <li><a href="<?php echo $shipping; ?>"><?php echo $text_shipping; ?></a></li>

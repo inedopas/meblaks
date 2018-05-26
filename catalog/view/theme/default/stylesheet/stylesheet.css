@@ -147,8 +147,7 @@ span.sku {
 
 }
 .old-price {
-    display: inline-block;
-    margin-right: 10px;
+      margin-right: 10px;
 }
 #uptocall-mini .uptocall-mini-phone {
   animation: 1.5s ease-out 0s normal none infinite running uptocallmini;
@@ -899,7 +898,7 @@ span.mainprice {
     line-height: 40px;
 }
 #product .cart .price {
-    width: 50%;
+    width: 60%;
     display: inline-block;
 }
 .extended_offer {
@@ -907,12 +906,13 @@ span.mainprice {
     text-align: left;
 }
 .zakazat{
-    width: 49%;
+    width: 39%;
     display: inline-block;
     text-align: right;
     vertical-align: bottom;
 }
 .price {
+    width: 61%;
     text-align: center;
     display: inline-block;
     font-size: 32px;

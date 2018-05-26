@@ -27,9 +27,17 @@ $_['column_image']           = 'Изображения';
 $_['column_price']           = 'Цена на сайте';
 $_['column_quantity']        = 'Количество';
 $_['column_status']          = 'Статус';
+
+// OCFilter start
+$_['entry_values']          		= 'Добавьте значения для этой опции.';
+$_['tab_ocfilter']          		= 'Опции фильтра';
+$_['ocfilter_select_category'] 	= 'Для начала, выберите категории для этого товара.';
+// OCFilter end
+      
 $_['column_action']          = 'Действие';
 
 // Entry
+$_['entry_main_category']    = 'Главная категория:';
 $_['entry_name']             = 'Название товара';
 $_['entry_description']      = 'Описание';
 $_['entry_meta_title'] 	     = 'Мета-тег Title';
@@ -79,6 +87,13 @@ $_['entry_option']           = 'Опция';
 $_['entry_option_value']     = 'Значение опции';
 $_['entry_required']         = 'Необходимо';
 $_['entry_status']           = 'Статус';
+
+// OCFilter start
+$_['entry_values']          		= 'Добавьте значения для этой опции.';
+$_['tab_ocfilter']          		= 'Опции фильтра';
+$_['ocfilter_select_category'] 	= 'Для начала, выберите категории для этого товара.';
+// OCFilter end
+      
 $_['entry_sort_order']       = 'Порядок сортировки';
 $_['entry_category']         = 'Показывать в категориях';
 $_['entry_filter']           = 'Фильтры';

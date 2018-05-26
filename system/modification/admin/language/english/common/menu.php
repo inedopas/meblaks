@@ -42,6 +42,11 @@ $_['text_modification']                = 'Modifications';
 $_['text_manufacturer']                = 'Manufacturers';
 $_['text_module']                      = 'Modules';
 $_['text_option']                      = 'Options';
+
+// OCFilter start
+$_['text_ocfilter'] = 'Product Filter OCFilter';
+// OCFilter end
+      
 $_['text_order']                       = 'Orders';
 $_['text_order_status']                = 'Order Statuses';
 $_['text_payment']                     = 'Payments';

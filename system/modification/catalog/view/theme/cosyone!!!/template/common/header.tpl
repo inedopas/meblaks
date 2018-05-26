@@ -9,6 +9,13 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <title><?php echo $title; ?></title>
+
+<?php if ($noindex) { ?>
+<!-- OCFilter Start -->
+<meta name="robots" content="noindex,nofollow" />
+<!-- OCFilter End -->
+<?php } ?>
+      
 <base href="<?php echo $base; ?>" />
 <?php if ($description) { ?>
 <meta name="description" content="<?php echo $description; ?>" />

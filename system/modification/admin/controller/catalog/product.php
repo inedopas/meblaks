@@ -674,6 +674,12 @@ $data['filter_sku'] = $filter_sku; // customized
 	}
 
 	protected function getForm() {
+
+    // OCFilter start
+    $this->document->addStyle('view/stylesheet/ocfilter/ocfilter.css');
+    $this->document->addScript('view/javascript/ocfilter/ocfilter.js');
+    // OCFilter end
+      
 		$data['heading_title'] = $this->language->get('heading_title');
 
 		$data['text_form'] = !isset($this->request->get['product_id']) ? $this->language->get('text_add') : $this->language->get('text_edit');
@@ -748,6 +754,7 @@ $data['filter_sku'] = $filter_sku; // customized
 		$data['entry_reward'] = $this->language->get('entry_reward');
 		$data['entry_layout'] = $this->language->get('entry_layout');
 		$data['entry_recurring'] = $this->language->get('entry_recurring');
+		$data['entry_main_category'] = $this->language->get('entry_main_category');
 
 		$data['help_keyword'] = $this->language->get('help_keyword');
 		$data['help_sku'] = $this->language->get('help_sku');
@@ -778,6 +785,13 @@ $data['filter_sku'] = $filter_sku; // customized
 		$data['button_recurring_add'] = $this->language->get('button_recurring_add');
 
 		$data['tab_general'] = $this->language->get('tab_general');
+
+    // OCFilter start
+    $data['tab_ocfilter'] = $this->language->get('tab_ocfilter');
+    $data['entry_values'] = $this->language->get('entry_values');
+    $data['ocfilter_select_category'] = $this->language->get('ocfilter_select_category');
+    // OCFilter end
+      
 		$data['tab_data'] = $this->language->get('tab_data');
 		$data['tab_attribute'] = $this->language->get('tab_attribute');
 		$data['tab_option'] = $this->language->get('tab_option');
@@ -1220,6 +1234,13 @@ $data['filter_sku'] = $filter_sku; // customized
 			}
 		}
 
+		if (isset($this->request->post['main_category_id'])) {
+			$data['main_category_id'] = $this->request->post['main_category_id'];
+		} elseif (isset($product_info)) {
+			$data['main_category_id'] = $this->model_catalog_product->getProductMainCategoryId($this->request->get['product_id']);
+		} else {
+			$data['main_category_id'] = 0;
+		}
 		// Filters
 		$this->load->model('catalog/filter');
 

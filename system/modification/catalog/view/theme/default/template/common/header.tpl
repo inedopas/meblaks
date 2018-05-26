@@ -68,6 +68,13 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title><?php echo $title; if(!empty($_GET['page'])) echo ' - '.intval($_GET['page']);?></title>
+
+<?php if ($noindex) { ?>
+<!-- OCFilter Start -->
+<meta name="robots" content="noindex,nofollow" />
+<!-- OCFilter End -->
+<?php } ?>
+      
 	<base href="<?php echo $base; ?>" />
 	<?php if ($description) { ?>
 	<meta name="description" content="<?php echo $description;  if(!empty($_GET['page'])) echo ' - '.intval($_GET['page']);?>" />
@@ -89,13 +96,14 @@
 	<script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
 <!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.js"></script>
-<link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+<!--<link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<script type="text/javascript" src="catalog/view/javascript/bootstrap/js/bootstrap.min.js"></script>
 <!-- <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" /> -->
 	
-	<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />
+	<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css?v0.2" />
 	<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/responsive.css" />
-	<!-- <link rel="stylesheet" type="text/css" href="catalog/view/theme/default/js/assets/owl.carousel.css" /> -->
+	<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/owl-carousel/owl.carousel.css" />
 <?php foreach ($styles as $style) { ?>
 <link rel="<?php echo $style['rel']; ?>" type="text/css" href="<?php echo $style['href']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
@@ -229,8 +237,8 @@
  
   <div class="contact">
 <div class="phones">
-	 	<a href = "javascript:void(0);" class="header_phone"><span>(095)</span> 569 - 08 - 04</a>
-  		<a href = "javascript:void(0);" class="header_phone"><span>(098)</span> 335 - 73 - 85</a>
+	 	<a href="tel:0955690804" class="header_phone"><span>(095)</span> 569 - 08 - 04</a>
+  		<a href="tel:0983357385" class="header_phone"><span>(098)</span> 335 - 73 - 85</a>
 	 	</div>
   	
   

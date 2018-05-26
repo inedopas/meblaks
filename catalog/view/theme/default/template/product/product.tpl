@@ -145,10 +145,8 @@
 
                                     <div class="old-price"><span class=""><?php echo $price; ?></span></div>
                                     <div class="old-price"><span style="color: green !important;font-size: 16px;">[-<?php echo $sales_percantage_main; ?>%]</span></div>
-                                    <div class="old-price"><span class=""><?php foreach ($products as $product) { ?>
-                                            <?php if ($product['special']) { ?><span
-                                                    style="color:green">[<?php echo $product['percent']; ?>
-                                                ]</span><?php } break;} ?>  -<?php echo $yousave; ?></span></div>
+                                    <div class="old-price"><span style="color: green !important;text-decoration:underline;"><?php foreach ($products as $product) { ?>
+                                            <?php if ($product['special']) { ?><?php } break;} ?>  <?php echo "-".$yousave; ?></span></div>
                                 </div>
 
                                 <?php } ?>
@@ -175,7 +173,10 @@
 
                                 <span class="mainprice" itemprop="price"><span
                                             style="font-size:22px;">Цена: </span><?php echo $special; ?></span>
-
+                                            <?php
+                      if($manufacturer=='Биформер') { ?>
+                                            <span style="color:green;">+Бесплатная доставка </span>
+                                            <?php } ?>
 
                                 <?php } ?>
 
